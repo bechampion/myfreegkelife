@@ -1,0 +1,15 @@
+*.terraform*
+*idea*
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*credentials*
+.terraform
+*.tfstate*
+cloudflare.json
+*idea*
+*.out
+*.key
+*.crt
+*jscript*
+*jscript/*
