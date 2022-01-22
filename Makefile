@@ -17,3 +17,5 @@ apply:
 	@rm -rf *.out
 auto-apply: init plan
 	terraform apply $(TC) plan.out --auto-approve
+creds:
+	gcloud container clusters get-credentials myfreegke-zonal --project myfreegke  --region us-central1
