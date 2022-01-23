@@ -1,3 +1,4 @@
+export GOOGLE_APPLICATION_CREDENTIALS := $(HOME)/Downloads/myfreegke-a9a1319ec918.json
 .PHONY: default
 default: apply
 init:
@@ -17,7 +18,7 @@ apply:
 	@rm -rf *.out
 auto-apply: init plan
 	terraform apply $(TC) plan.out --auto-approve
-creds:
-	gcloud container clusters get-credentials myfreegke-zonal --project myfreegke  --region us-central1
+creds: gcloudsvcacct
+	gcloud container clusters get-credentials myfreegke --project myfreegke  --region us-central1-a
 gcloudsvcacct:
-	gcloud auth activate-service-account 448328090095-compute@developer.gserviceaccount.com --key-file=$GOOGLE_APPLICATION_CREDENTIALS --project=myfreegke
+	gcloud auth activate-service-account 448328090095-compute@developer.gserviceaccount.com --key-file=$$GOOGLE_APPLICATION_CREDENTIALS --project=myfreegke
