@@ -1,8 +1,5 @@
 *.terraform*
 *idea*
-# .tfstate files
-*.tfstate
-*.tfstate.*
 *credentials*
 .terraform
 *.tfstate*
