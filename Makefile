@@ -1,3 +1,4 @@
+#Configure whatever service account you got.
 export GOOGLE_APPLICATION_CREDENTIALS := $(HOME)/Downloads/myfreegke-a9a1319ec918.json
 .PHONY: default
 default: apply
